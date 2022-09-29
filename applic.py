@@ -13,8 +13,9 @@ flaskAppInstance =  Flask(__name__)
 
 @flaskAppInstance.route("/")
 def hello():
-    flaskAppInstance.logger.info("Helloooo")
-    return "Hello!!"
+    flaskAppInstance.logger.info("This is a simple Flask App")
+    flaskAppInstance.logger.info("Hello there")
+    return "Hello there!!"
 
 @flaskAppInstance.route("/get")
 def get():
