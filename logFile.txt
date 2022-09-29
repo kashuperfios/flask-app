@@ -1,0 +1,52 @@
+2022-09-27 12:55:42 INFO-[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-09-27 12:55:42 INFO-[33mPress CTRL+C to quit[0m
+2022-09-27 12:55:49 ERROR-Exception on /get [GET]
+Traceback (most recent call last):
+  File "/home/kashifa-khursheed/flask-crud-app/venv/lib/python3.8/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/kashifa-khursheed/flask-crud-app/venv/lib/python3.8/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/kashifa-khursheed/flask-crud-app/venv/lib/python3.8/site-packages/flask_restful/__init__.py", line 271, in error_router
+    return original_handler(e)
+  File "/home/kashifa-khursheed/flask-crud-app/venv/lib/python3.8/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/kashifa-khursheed/flask-crud-app/venv/lib/python3.8/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/kashifa-khursheed/flask-crud-app/applic.py", line 21, in get
+    from api.Task import Task
+  File "/home/kashifa-khursheed/flask-crud-app/api/__init__.py", line 7, in <module>
+    restServer.add_resource(Task, "/api/task")
+  File "/home/kashifa-khursheed/flask-crud-app/venv/lib/python3.8/site-packages/flask_restful/__init__.py", line 391, in add_resource
+    self._register_view(self.app, resource, *urls, **kwargs)
+  File "/home/kashifa-khursheed/flask-crud-app/venv/lib/python3.8/site-packages/flask_restful/__init__.py", line 457, in _register_view
+    app.add_url_rule(rule, view_func=resource_func, **kwargs)
+  File "/home/kashifa-khursheed/flask-crud-app/venv/lib/python3.8/site-packages/flask/scaffold.py", line 49, in wrapper_func
+    self._check_setup_finished(f_name)
+  File "/home/kashifa-khursheed/flask-crud-app/venv/lib/python3.8/site-packages/flask/app.py", line 722, in _check_setup_finished
+    raise AssertionError(
+AssertionError: The setup method 'add_url_rule' can no longer be called on the application. It has already handled its first request, any changes will not be applied consistently.
+Make sure all imports, decorators, functions, etc. needed to set up the application are done before running it.
+2022-09-27 12:55:49 INFO-127.0.0.1 - - [27/Sep/2022 12:55:49] "[35m[1mGET /get HTTP/1.1[0m" 500 -
+2022-09-27 12:55:51 INFO-127.0.0.1 - - [27/Sep/2022 12:55:51] "GET /get HTTP/1.1" 200 -
+2022-09-27 12:55:55 INFO-127.0.0.1 - - [27/Sep/2022 12:55:55] "GET / HTTP/1.1" 200 -
+2022-09-27 12:56:00 INFO-127.0.0.1 - - [27/Sep/2022 12:56:00] "GET /post HTTP/1.1" 200 -
+2022-09-27 12:56:48 INFO-127.0.0.1 - - [27/Sep/2022 12:56:48] "[33mPOST /api/task HTTP/1.1[0m" 404 -
+2022-09-27 12:56:54 INFO-127.0.0.1 - - [27/Sep/2022 12:56:54] "[33mGET /api/task HTTP/1.1[0m" 404 -
+2022-09-27 12:57:05 INFO-127.0.0.1 - - [27/Sep/2022 12:57:05] "[33mGET /api/task HTTP/1.1[0m" 404 -
+2022-09-27 12:57:05 INFO-127.0.0.1 - - [27/Sep/2022 12:57:05] "[33mGET /api/task HTTP/1.1[0m" 404 -
+2022-09-27 13:17:43 INFO-127.0.0.1 - - [27/Sep/2022 13:17:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-09-27 15:58:41 INFO-[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5005
+ * Running on http://192.168.1.151:5005
+2022-09-27 15:58:41 INFO-[33mPress CTRL+C to quit[0m
+2022-09-27 15:58:41 INFO- * Restarting with stat
+2022-09-27 16:06:46 INFO-127.0.0.1 - - [27/Sep/2022 16:06:46] "GET / HTTP/1.1" 200 -
+2022-09-27 16:06:51 INFO-127.0.0.1 - - [27/Sep/2022 16:06:51] "GET / HTTP/1.1" 200 -
+2022-09-27 16:06:51 INFO-127.0.0.1 - - [27/Sep/2022 16:06:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-09-29 08:48:33 INFO-127.0.0.1 - - [29/Sep/2022 08:48:33] "GET /post HTTP/1.1" 200 -
+2022-09-29 08:48:34 INFO-127.0.0.1 - - [29/Sep/2022 08:48:34] "GET /post HTTP/1.1" 200 -
+2022-09-29 08:48:34 INFO-127.0.0.1 - - [29/Sep/2022 08:48:34] "GET /post HTTP/1.1" 200 -
+2022-09-29 08:48:34 INFO-127.0.0.1 - - [29/Sep/2022 08:48:34] "GET /post HTTP/1.1" 200 -
+2022-09-29 12:23:16 INFO-127.0.0.1 - - [29/Sep/2022 12:23:16] "GET /post HTTP/1.1" 200 -
